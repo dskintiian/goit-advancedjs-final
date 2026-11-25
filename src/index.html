@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your Energy — find workouts by muscles, body parts and equipment. Save favorites and stay motivated every day."
+    />
+    <title>Your Energy</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icons/favicon.svg" />
+  </head>
+  <body data-page="home">
+    <load src="partials/header.html" />
+
+    <main>
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-title">
+            <img
+              class="hero__sun"
+              src="./images/icons/sun.svg"
+              alt=""
+              width="38"
+              height="38"
+            />
+            Get <em class="hero__accent">Body</em> in shape, Stay healthy
+          </h1>
+          <p class="hero__text">
+            Transform your physique and embrace a healthier lifestyle with our
+            comprehensive fitness and nutrition support.
+          </p>
+        </div>
+
+        <picture class="hero__detail">
+          <source
+            type="image/webp"
+            srcset="
+              ./images/photos/hero-detail-desktop.webp    1x,
+              ./images/photos/hero-detail-desktop-2x.webp 2x
+            "
+          />
+          <img
+            class="hero__detail-image"
+            src="./images/photos/hero-detail-desktop.webp"
+            alt="Two women balancing on one leg on yoga mats"
+            width="168"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+
+        <ul class="hero__tags" aria-label="Popular tags">
+          <li class="hero__tag">#Sport</li>
+          <li class="hero__tag">#Healthy</li>
+          <li class="hero__tag">#Workout</li>
+          <li class="hero__tag">#Diet</li>
+        </ul>
+
+        <picture class="hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            type="image/webp"
+            srcset="
+              ./images/photos/hero-desktop.webp    1x,
+              ./images/photos/hero-desktop-2x.webp 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            type="image/webp"
+            srcset="
+              ./images/photos/hero-tablet.webp    1x,
+              ./images/photos/hero-tablet-2x.webp 2x
+            "
+          />
+          <source
+            type="image/webp"
+            srcset="
+              ./images/photos/hero-mobile.webp    1x,
+              ./images/photos/hero-mobile-2x.webp 2x
+            "
+          />
+          <img
+            class="hero__image"
+            src="./images/photos/hero-mobile.webp"
+            alt="Two women in a plank giving each other a high five by the lake"
+            width="335"
+            height="460"
+            fetchpriority="high"
+          />
+        </picture>
+      </section>
+
+      <section
+        class="exercises"
+        aria-labelledby="exercises-title"
+        data-exercises-section
+      >
+        <div class="container exercises__layout">
+            <div class="catalog">
+              <div class="exercises__header">
+                <div class="exercises__heading">
+                  <h2 class="exercises__title" id="exercises-title" data-exercises-title>
+                    Exercises
+                  </h2>
+                  <div class="breadcrumb" data-breadcrumb hidden></div>
+                </div>
+
+                <form class="search" data-search data-search-form hidden>
+                  <label class="search__field">
+                    <span class="visually-hidden">Search</span>
+                    <input
+                      class="search__input"
+                      type="search"
+                      name="keyword"
+                      placeholder="Search"
+                      data-search-input
+                    />
+                  </label>
+                  <button class="search__clear" type="button" data-search-clear aria-label="Clear search">
+                    <img src="./images/icons/clear-search.svg" alt="" width="18" height="18" />
+                  </button>
+                  <button class="search__submit" type="submit" aria-label="Search">
+                    <img src="./images/icons/search.svg" alt="" width="18" height="18" />
+                  </button>
+                </form>
+
+                <div class="filters" data-filters role="group" aria-label="Exercise filters">
+                  <button class="filters__btn is-active" type="button" data-filter="Muscles" aria-pressed="true">
+                    Muscles
+                  </button>
+                  <button class="filters__btn" type="button" data-filter="Body parts" aria-pressed="false">
+                    Body parts
+                  </button>
+                  <button class="filters__btn" type="button" data-filter="Equipment" aria-pressed="false">
+                    Equipment
+                  </button>
+                </div>
+              </div>
+
+              <ul class="catalog__list catalog__list--categories" data-catalog-list></ul>
+              <p class="catalog__empty" data-catalog-empty hidden>
+                No results found.
+              </p>
+              <div class="pagination" data-pagination hidden></div>
+            </div>
+
+            <aside class="sidebar" aria-label="Daily motivation">
+              <article class="quote">
+                <div class="quote__header">
+                  <div class="quote__icon">
+                    <img src="./images/icons/runner.svg" alt="" width="34" height="32" />
+                  </div>
+                  <h3 class="quote__title">Quote of the day</h3>
+                  <img
+                    class="quote__marks"
+                    src="./images/icons/quote.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <div class="quote__content">
+                  <p class="quote__text" data-quote-text>Loading...</p>
+                  <p class="quote__author" data-quote-author></p>
+                </div>
+              </article>
+
+              <picture class="sidebar__photo">
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/photos/daily-desktop.webp    1x,
+                    ./images/photos/daily-desktop-2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/photos/daily-tablet.webp    1x,
+                    ./images/photos/daily-tablet-2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/photos/daily-mobile.webp    1x,
+                    ./images/photos/daily-mobile-2x.webp 2x
+                  "
+                />
+                <img
+                  src="./images/photos/daily-mobile.webp"
+                  alt="Women resting after workout"
+                  width="335"
+                  height="242"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+
+              <article class="daily-norm">
+                <div class="daily-norm__icon">
+                  <img src="./images/icons/dumbbell.svg" alt="" width="24" height="24" />
+                </div>
+                <div class="daily-norm__heading">
+                  <h3 class="daily-norm__title">110 min</h3>
+                  <p class="daily-norm__subtitle">Daily norm of sports</p>
+                </div>
+                <p class="daily-norm__text">
+                  The World Health Organization recommends at least 150 minutes of
+                  moderate-intensity aerobic physical activity throughout the week for
+                  adults aged 18-64. However, what happens if we adjust that number to
+                  110 minutes every day?
+                </p>
+              </article>
+            </aside>
+        </div>
+      </section>
+    </main>
+
+    <load src="partials/footer.html" />
+    <load src="partials/modals.html" />
+
+    <script type="module" src="./ts/main.ts"></script>
+  </body>
+</html>

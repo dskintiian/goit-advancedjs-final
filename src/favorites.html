@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your saved workouts on Your Energy. Manage favorites and stay consistent."
+    />
+    <title>Favorites | Your Energy</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icons/favicon.svg" />
+  </head>
+  <body data-page="favorites">
+    <load src="partials/header.html" />
+
+    <main>
+      <section class="favorites" aria-labelledby="favorites-title">
+        <div class="container">
+          <h1 class="favorites__title" id="favorites-title">Favorites</h1>
+
+          <div class="favorites__layout">
+            <aside class="sidebar" aria-label="Daily motivation">
+              <article class="quote">
+                <div class="quote__header">
+                  <div class="quote__icon">
+                    <img src="./images/icons/runner.svg" alt="" width="34" height="32" />
+                  </div>
+                  <h2 class="quote__title">Quote of the day</h2>
+                  <img
+                    class="quote__marks"
+                    src="./images/icons/quote.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <div class="quote__content">
+                  <p class="quote__text" data-quote-text>Loading...</p>
+                  <p class="quote__author" data-quote-author></p>
+                </div>
+              </article>
+
+              <div class="favorites-info">
+                <article class="daily-norm">
+                  <div class="daily-norm__icon">
+                    <img src="./images/icons/dumbbell.svg" alt="" width="24" height="24" />
+                  </div>
+                  <div class="daily-norm__heading">
+                    <h2 class="daily-norm__title">110 min</h2>
+                    <p class="daily-norm__subtitle">Daily norm of sports</p>
+                  </div>
+                  <p class="daily-norm__text">
+                    The World Health Organization recommends at least 150 minutes of
+                    moderate-intensity aerobic physical activity throughout the week for
+                    adults aged 18-64.
+                  </p>
+                </article>
+
+                <picture class="sidebar__photo">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/photos/favorites.webp    1x,
+                      ./images/photos/favorites-2x.webp 2x
+                    "
+                  />
+                  <img
+                    src="./images/photos/favorites.webp"
+                    alt="Woman stretching outdoors"
+                    width="344"
+                    height="141"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+            </aside>
+
+            <div class="favorites__content">
+              <p class="favorites__empty" data-favorites-empty>
+                It appears that you haven't added any exercises to your favorites yet. To get
+                started, you can add exercises that you like to your favorites for easier
+                access in the future.
+              </p>
+              <ul class="catalog__list catalog__list--exercises" data-favorites-list></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <load src="partials/footer.html" />
+    <load src="partials/modals.html" />
+
+    <script type="module" src="./ts/favorites-main.ts"></script>
+  </body>
+</html>

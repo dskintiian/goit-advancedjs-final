@@ -1,0 +1,71 @@
+<div
+  class="backdrop"
+  data-exercise-modal
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Exercise details"
+>
+  <div class="modal" data-modal-content></div>
+</div>
+
+<div
+  class="backdrop"
+  data-rating-modal
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Give a rating"
+>
+  <div class="modal modal--rating">
+    <button
+      class="modal__close"
+      type="button"
+      data-rating-close
+      aria-label="Close"
+    >
+      <img src="./images/icons/close.svg" alt="" width="28" height="28" />
+    </button>
+    <h2 class="modal__title">Rating</h2>
+    <p class="modal__rating-value">
+      <span data-rate-value>0.0</span>
+    </p>
+    <div class="rating-stars" role="group" aria-label="Select rating">
+      <button type="button" data-rate="1" aria-label="1 star">
+        <img src="./images/icons/star-muted.svg" alt="" width="24" height="24" />
+      </button>
+      <button type="button" data-rate="2" aria-label="2 stars">
+        <img src="./images/icons/star-muted.svg" alt="" width="24" height="24" />
+      </button>
+      <button type="button" data-rate="3" aria-label="3 stars">
+        <img src="./images/icons/star-muted.svg" alt="" width="24" height="24" />
+      </button>
+      <button type="button" data-rate="4" aria-label="4 stars">
+        <img src="./images/icons/star-muted.svg" alt="" width="24" height="24" />
+      </button>
+      <button type="button" data-rate="5" aria-label="5 stars">
+        <img src="./images/icons/star-muted.svg" alt="" width="24" height="24" />
+      </button>
+    </div>
+    <form class="rating-form" data-rating-form novalidate>
+      <label>
+        <span class="visually-hidden">Email</span>
+        <input type="email" name="email" placeholder="Email" required />
+      </label>
+      <label>
+        <span class="visually-hidden">Your comment</span>
+        <textarea name="review" placeholder="Your comment" rows="4" required></textarea>
+      </label>
+      <button class="btn btn--primary" type="submit">Send</button>
+      <p class="form-message" data-rating-message role="status"></p>
+    </form>
+  </div>
+</div>
+
+<div class="loader" data-loader aria-hidden="true" role="status">
+  <span class="loader__spinner" aria-label="Loading"></span>
+</div>
+
+<button class="scroll-up" type="button" data-scroll-up aria-label="Scroll to top">
+  <img src="./images/icons/scroll-top.svg" alt="" width="24" height="24" />
+</button>
